@@ -1,0 +1,94 @@
+<?php
+	session_start();
+?>
+
+<html>
+	<head>
+		<link href="tst.css" type="text/css" rel="stylesheet">
+		<link rel="icon" type="image/ico" href="images/b.ico">
+		<title> Contact Us</title>
+	</head>
+	<body>
+	<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+	<div id="container">
+		<div id="head-nav">		
+			<div id="header">
+				<p> Online Book Store</p>		
+			</div>
+			<div id="sign">
+				<?php if(isset($_SESSION['fname'])){
+					?><p> Welcome<?php echo $_SESSION['fname']?> <a href="logout.php"> Logout</a></p>
+					<?php
+				}
+				else{
+					?>
+					<p><a href="login.php">Login</a> &nbsp; <a href="reg.php" > Sign Up</a></p>
+				<?php }
+			?>
+			</div>
+			<div id="nav">
+				<ul>
+					<a href="index.php"><li> Home </li></a>
+					<a href="about_us.php"><li> About Us</li> </a>
+					<a href="collection.php"><li> Collections</li> </a>
+					<a href="contactus.php"><li> Contact Us</li> </a>
+					<a href="cart0.php?page=cart1"><li> Cart </li> </a>
+				</ul>		
+			</div>
+		</div>
+		<div id="container-body">
+			<div id="image">
+			<img src="images/contact.jpg"><p style="margin-left: 50px; color:#fff;padding:10px;overflow:hidden;background:purple"> How can I help U ?</p> </p>
+			</img>
+			</div>
+			<div id="lft">
+				<ul>
+					<a href="biotech.php"><li> Bio-Tech </li> </a>
+					<a href="computers.php"><li> Computers </li></a>	
+					<a href="electrical.php"><li> Electrical </li></a>
+					<a href="electronic.php"><li> Electronics </li>	</a>	
+				</ul>
+			</div>
+			<div id="contactus">
+				<h1 align="center"> 01/Get in Touch</h1>
+				<p> We're very approachable and would love to speak to you. Feed free to call, send us an email, tweet us or simply complete the enquiry form. </p>
+				<table>			
+				<tr><td><img src="images/phn.png" style="height:50px;"></img></td> <td><p>01435 566033</p></td></tr>
+				<tr><td><img src="images/g.png"></img></td><td><p> #OnlineBookStore</p></td></tr>
+				<tr><td><img src="images/t2.png"></img></td><td><p> @OnlineBookStore</p></td></tr>
+				<tr><td><img src="images/f.png"></img></td><td><p> facebook.com/onlinebookstore</p></td></tr>
+				<tr><td><img src="images/l.png" style="width:30px"></img></td><td><p>Apeejay House, 15 Park Street,Kolkata (Calcutta) 700 016, India </p></td></tr>
+				</table>
+				<a href="https://www.google.co.in/maps/place/Apeejay+House,+15,+Anandilal+Poddar+Sarani,+Taltala,+Kolkata,+West+Bengal+700016/@22.5547796,88.3517014,15z/data=!4m2!3m1!1s0x3a02770fa1baf9db:0xf4b98309494c25b4" ><img src="images/map.jpg" style="padding-left:100px;width:800px;height:200px"></img></a>
+			</div>
+			<div id="contact_us">
+				<h1> 02/Send us a Message </h1>
+				<table>				
+					<tr><td><input type="text" name="username" placeholder="NAME"/><br></td></tr>
+					<tr><td><input type="text" name="phn_num" placeholder="TELEPHONE NUMBER"/></td></tr>
+					<tr><td><input type="mail" name="email" placeholder="EMAIL"></td></tr>
+					<tr><td><input type="text" name="message" placeholder="YOUR MESSAGE" style="height:130px"/></td></tr>
+					<tr><td><input type="submit" value="Send Message"/></td></tr>
+				</table>		
+				
+			</div>
+			<div id="contact">
+				<p> Follow  us </p>
+			<a href="" ><img src="images/f.png"	>facebook/OnlineBookStore </img></a><br>
+			<a href="" ><img src="images/g.png">#OnlineBookStore </img></a><br>
+			<a href="" ><img src="images/p.png">OnlineBookStore</img></a><br>
+			<a href="" ><img src="images/t2.png">@OnlineBookStore </img></a>
+			</div>
+			<div id="footer"> 
+				<p> &copy; 2014, Mahesh, Jasan</p>		
+			</div>
+		</div>	
+	</div>	
+	</body>
+</html>
